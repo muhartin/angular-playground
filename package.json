@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.900.7",
-    "@angular/cli": "^8.2.2",
+    "@angular/cli": "^8.2.13",
     "@angular/compiler-cli": "^8.2.13",
     "@angular/language-service": "^8.2.13",
     "@types/jasmine": "^2.8.8",
@@ -49,6 +49,6 @@
     "protractor": "^5.4.0",
     "ts-node": "^7.0.0",
     "tslint": "^5.11.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.8.3"
   }
 }
