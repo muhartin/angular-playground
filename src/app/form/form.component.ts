@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 import {
-    FormArray,
-    FormBuilder,
-    FormControl,
-    FormGroup,
-    Validators,
-} from '@angular/forms';
+  FormArray,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators
+} from "@angular/forms";
 
 @Component({
-    selector: 'app-form',
-    templateUrl: 'form.component.html',
+  selector: "app-form",
+  templateUrl: "form.component.html"
 })
 export class FormComponent implements OnInit {
   readonly title: string;
@@ -18,30 +18,26 @@ export class FormComponent implements OnInit {
 
   testForm: FormGroup;
 
-  constructor(
-    private formBuilder: FormBuilder
-  ) {
-    this.title = 'Title';
-    this.subtitle = '';
+  constructor(private formBuilder: FormBuilder) {
+    this.title = "Title";
+    this.subtitle = "";
   }
 
   get allIncome() {
-    return this.testForm.get('allIncome') as FormArray;
+    return this.testForm.get("allIncome") as FormArray;
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   private createForm() {
     this.testForm = this.formBuilder.group({
-      foo: [''],
+      foo: [""],
       bar: [0],
       allIncome: this.formBuilder.array([])
-    })
+    });
   }
 
   onChkForm() {
-    console.log('check form: ', this.testForm);
+    console.log("check form: ", this.testForm);
   }
 }
